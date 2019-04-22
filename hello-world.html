@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Hello...</title>
+<!--<link rel="stylesheet" href="sample.css">-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="student">
+	<student-form @student-info-submitted="studentInfoReceived"></student-form>
+	
+	          
+	
+	<!--<ul v-if="studentInfo.length">-->
+	<ul>
+   	  <li v-for="info in infos" v-bind:key="info.studentId">ID：{{ info.studentId }} / 名前：{{ info.studentName }} / コース:{{ info.studentCourse }} / 受講期:{{ info.studentTerm }}</li>	
+   	 </ul>
+	</div>
+  <script src="sample.js"></script>
+</body>
+</html>
